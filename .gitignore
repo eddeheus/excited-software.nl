@@ -4,9 +4,9 @@
 # Secrets (SMTP, API-keys e.d.) — nooit in git
 config/secrets.php
 
-# Let's Encrypt validatie: tijdelijk, hoort niet in git
-.well-known/acme-challenge/*
-!.well-known/acme-challenge/.gitkeep
+# Let's Encrypt validatie: tijdelijk en server-side (Plesk), hoort niet in git.
+# De rest van .well-known (bv. security.txt) wordt wel getrackt en gedeployd.
+.well-known/acme-challenge/
 
 # OS / editor
 .DS_Store

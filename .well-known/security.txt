@@ -1,0 +1,8 @@
+# Beveiligingsprobleem gevonden op excited-software.nl of in een
+# door EXCITED software beheerd systeem? Meld het via onderstaand
+# contactpunt. We reageren zo snel mogelijk en houden je op de hoogte.
+
+Contact: https://excited-software.nl/#contact
+Expires: 2027-09-09T00:00:00.000Z
+Preferred-Languages: nl, en
+Canonical: https://excited-software.nl/.well-known/security.txt
