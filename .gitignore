@@ -1,0 +1,17 @@
+# SFTP/deploy config bevat hostnaam, gebruikersnaam en pad naar een SSH key
+.vscode/sftp.json
+
+# Secrets (SMTP, API-keys e.d.) — nooit in git
+config/secrets.php
+
+# Let's Encrypt validatie: tijdelijk, hoort niet in git
+.well-known/acme-challenge/*
+!.well-known/acme-challenge/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Dependencies (indien later toegevoegd)
+/vendor/
+/node_modules/

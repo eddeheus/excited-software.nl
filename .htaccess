@@ -1,0 +1,126 @@
+# -----------------
+# SITEMAP REWRITEN
+# -----------------
+RewriteEngine On
+RewriteRule ^sitemap.xml$     sitemap.php [L]
+RewriteRule ^robots.txt$      robots.php [L]
+RewriteRule ^environment.php$ index.php [L]
+
+# --------------------------
+# Eerst rewriten naar HTTPS
+# --------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# -----------------------
+# Doorverwijzen naar WWW
+# -----------------------
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule .* http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------
+# Charset op UTF8
+# ----------------
+AddCharset UTF-8 .php
+
+# -----------------------------
+# Directory browsing uitzetten
+# -----------------------------
+Options All -Indexes
+
+# -------------------------------------------
+# GZIP aanzetten en browser bugs verwijderen
+# -------------------------------------------
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+Header append Vary User-Agent
+
+# ----------------------------------------------------------
+# Permanente redirects van oude url paden naar nieuwe (301)
+# ----------------------------------------------------------
+# Redirect 301 /oud/oud.html http://www.nieuwe-locatie.nl/nieuw.html
+# Redirect 301 /oud/oud.html /nieuw/nieuw.html
+
+# --------------------------
+# Blokkeren van IP adressen
+# --------------------------
+# order allow,deny
+# deny from 87.210.99.84
+# allow from all
+
+# --------------------------
+# Blokkeren van libwww-perl
+# --------------------------
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+RewriteRule .* - [F,L]
+
+# --------------------------------------------
+# CACHING: 1uur:3600, 1dag:86400, 1week:691200
+# --------------------------------------------
+FileETag MTime Size
+ExpiresActive on
+ExpiresDefault "access plus 7200 seconds"
+ExpiresByType font/ttf        "access plus 1 month"
+ExpiresByType font/woff       "access plus 1 month"
+ExpiresByType image/x-icon    "access plus 691200 seconds"
+ExpiresByType image/jpeg      "access plus 691200 seconds"
+ExpiresByType image/png       "access plus 691200 seconds"
+ExpiresByType image/gif       "access plus 691200 seconds"
+ExpiresByType image/svg+xml   "access plus 1 month"
+ExpiresByType text/css        "access plus 691200 seconds"
+ExpiresByType text/javascript "access plus 691200 seconds"
+ExpiresByType text/html       "access plus 7200 seconds"
+ExpiresByType application/xhtml+xml         "access plus 7200 seconds"
+ExpiresByType application/x-shockwave-flash "access plus 691200 seconds"
+ExpiresByType application/x-javascript      "access plus 691200 seconds"
+
+# ----------------------------------------------------------
+# Alles doorverwijzen naar de index (indien URL niet bekend)
+# ----------------------------------------------------------
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/_backup
+RewriteCond %{REQUEST_URI} !^/_thumbs
+RewriteCond %{REQUEST_URI} !^/backend
+RewriteCond %{REQUEST_URI} !^/frontend
+RewriteCond %{REQUEST_URI} !^/images
+RewriteCond %{REQUEST_URI} !^/libraries
+RewriteCond %{REQUEST_URI} !^(.*)undefined(.*)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+# ------------------------
+# 404 ERROR: Error pagina
+# ------------------------
+ErrorDocument 404 /frontend/template_system_error.php
+
+# ------------------------------------------------------
+# MAINTENANCE PAGE | UNDER CONSTRUCTION
+# Uitzondering voor ontwikkel IP adressen (kbite en ed)
+# ------------------------------------------------------
+#RewriteEngine On
+
+# IP KBITE
+#RewriteCond %{REMOTE_ADDR} !^89\.146\.56\.155
+
+# IP EXCITED
+#RewriteCond %{REMOTE_ADDR} !^94\.210\.4\.211
+
+# De rest doorsturen naar een maintenance pagina
+#RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|css|js) [NC]
+#RewriteRule .* /maintenance.html [R=302,L]
