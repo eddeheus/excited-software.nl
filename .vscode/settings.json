@@ -1,0 +1,12 @@
+{
+  "editor.tokenColorCustomizations": { "comments": "#6A8A36" },
+  "workbench.colorTheme": "Visual Studio Dark",
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 22,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "files.autoSave": "onWindowChange",
+  "explorer.confirmDelete": false
+}

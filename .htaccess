@@ -1,126 +1,82 @@
-# -----------------
-# SITEMAP REWRITEN
-# -----------------
-RewriteEngine On
-RewriteRule ^sitemap.xml$     sitemap.php [L]
-RewriteRule ^robots.txt$      robots.php [L]
-RewriteRule ^environment.php$ index.php [L]
+# ============================================================
+# excited-software.nl — Apache configuratie
+# ============================================================
 
-# --------------------------
-# Eerst rewriten naar HTTPS
-# --------------------------
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Homepage-script (er is geen index.html meer)
+DirectoryIndex index.php
 
-# -----------------------
-# Doorverwijzen naar WWW
-# -----------------------
-#RewriteEngine On
-#RewriteCond %{HTTP_HOST} !^www\. [NC]
-#RewriteRule .* http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ------------------------------------------------------------
+# HTTP -> HTTPS (301)
+# ------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
 
-# ----------------
-# Charset op UTF8
-# ----------------
-AddCharset UTF-8 .php
+# ------------------------------------------------------------
+# Charset
+# ------------------------------------------------------------
+AddDefaultCharset UTF-8
 
-# -----------------------------
-# Directory browsing uitzetten
-# -----------------------------
-Options All -Indexes
+# ------------------------------------------------------------
+# Geen directory listing
+# ------------------------------------------------------------
+Options -Indexes
 
-# -------------------------------------------
-# GZIP aanzetten en browser bugs verwijderen
-# -------------------------------------------
-AddOutputFilterByType DEFLATE text/plain
-AddOutputFilterByType DEFLATE text/html
-AddOutputFilterByType DEFLATE text/xml
-AddOutputFilterByType DEFLATE text/css
-AddOutputFilterByType DEFLATE application/xml
-AddOutputFilterByType DEFLATE application/xhtml+xml
-AddOutputFilterByType DEFLATE application/rss+xml
-AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
-BrowserMatch ^Mozilla/4 gzip-only-text/html
-BrowserMatch ^Mozilla/4\.0[678] no-gzip
-BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-Header append Vary User-Agent
+# ------------------------------------------------------------
+# Security headers
+# ------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # HSTS: alleen meesturen over HTTPS
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+</IfModule>
 
-# ----------------------------------------------------------
-# Permanente redirects van oude url paden naar nieuwe (301)
-# ----------------------------------------------------------
-# Redirect 301 /oud/oud.html http://www.nieuwe-locatie.nl/nieuw.html
-# Redirect 301 /oud/oud.html /nieuw/nieuw.html
+# ------------------------------------------------------------
+# GZIP-compressie
+# ------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
+  AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript image/svg+xml
+</IfModule>
 
-# --------------------------
-# Blokkeren van IP adressen
-# --------------------------
-# order allow,deny
-# deny from 87.210.99.84
-# allow from all
-
-# --------------------------
-# Blokkeren van libwww-perl
-# --------------------------
-RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
-RewriteRule .* - [F,L]
-
-# --------------------------------------------
-# CACHING: 1uur:3600, 1dag:86400, 1week:691200
-# --------------------------------------------
+# ------------------------------------------------------------
+# Browser-caching
+# ------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                       "access plus 2 hours"
+  ExpiresByType text/html              "access plus 2 hours"
+  ExpiresByType text/css               "access plus 1 week"
+  ExpiresByType text/javascript        "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType image/x-icon           "access plus 1 month"
+  ExpiresByType image/png              "access plus 1 week"
+  ExpiresByType image/jpeg             "access plus 1 week"
+  ExpiresByType image/gif              "access plus 1 week"
+  ExpiresByType image/webp             "access plus 1 week"
+  ExpiresByType image/svg+xml          "access plus 1 month"
+  ExpiresByType font/woff2             "access plus 1 month"
+</IfModule>
 FileETag MTime Size
-ExpiresActive on
-ExpiresDefault "access plus 7200 seconds"
-ExpiresByType font/ttf        "access plus 1 month"
-ExpiresByType font/woff       "access plus 1 month"
-ExpiresByType image/x-icon    "access plus 691200 seconds"
-ExpiresByType image/jpeg      "access plus 691200 seconds"
-ExpiresByType image/png       "access plus 691200 seconds"
-ExpiresByType image/gif       "access plus 691200 seconds"
-ExpiresByType image/svg+xml   "access plus 1 month"
-ExpiresByType text/css        "access plus 691200 seconds"
-ExpiresByType text/javascript "access plus 691200 seconds"
-ExpiresByType text/html       "access plus 7200 seconds"
-ExpiresByType application/xhtml+xml         "access plus 7200 seconds"
-ExpiresByType application/x-shockwave-flash "access plus 691200 seconds"
-ExpiresByType application/x-javascript      "access plus 691200 seconds"
 
-# ----------------------------------------------------------
-# Alles doorverwijzen naar de index (indien URL niet bekend)
-# ----------------------------------------------------------
-RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/_backup
-RewriteCond %{REQUEST_URI} !^/_thumbs
-RewriteCond %{REQUEST_URI} !^/backend
-RewriteCond %{REQUEST_URI} !^/frontend
-RewriteCond %{REQUEST_URI} !^/images
-RewriteCond %{REQUEST_URI} !^/libraries
-RewriteCond %{REQUEST_URI} !^(.*)undefined(.*)$
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [L,QSA]
+# ------------------------------------------------------------
+# Kwaadaardige user agents weren
+# ------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} libwww-perl [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
 
-# ------------------------
-# 404 ERROR: Error pagina
-# ------------------------
-ErrorDocument 404 /frontend/template_system_error.php
-
-# ------------------------------------------------------
-# MAINTENANCE PAGE | UNDER CONSTRUCTION
-# Uitzondering voor ontwikkel IP adressen (kbite en ed)
-# ------------------------------------------------------
-#RewriteEngine On
-
-# IP KBITE
-#RewriteCond %{REMOTE_ADDR} !^89\.146\.56\.155
-
-# IP EXCITED
-#RewriteCond %{REMOTE_ADDR} !^94\.210\.4\.211
-
-# De rest doorsturen naar een maintenance pagina
-#RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
-#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|css|js) [NC]
-#RewriteRule .* /maintenance.html [R=302,L]
+# ------------------------------------------------------------
+# Gevoelige bestanden afschermen (dotfiles, docs, scripts)
+# .well-known blijft bereikbaar: die begint niet met een punt
+# in de bestandsnaam zelf, alleen de map.
+# ------------------------------------------------------------
+<FilesMatch "^\.|\.(md|bat|lock|ini|dist)$">
+  Require all denied
+</FilesMatch>
