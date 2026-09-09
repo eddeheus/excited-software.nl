@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8LT5D3NC7"></script>
   <script>
@@ -9,8 +12,6 @@
     gtag('js', new Date());
     gtag('config', 'G-W8LT5D3NC7');
   </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXCITED software | Standaard in maatwerk software</title>
   <meta name="description" content="EXCITED software bouwt en onderhoudt maatwerkapplicaties in PHP, Oracle APEX en PL/SQL, koppelt systemen aan elkaar en houdt je IT draaiend.">
   <meta name="author" content="Ed de Heus">
@@ -245,7 +246,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="year"></span> EXCITED software &nbsp;·&nbsp; Kamgrasstraat 30, 2288 HE Rijswijk</span>
-    <span>KvK 27144483 &nbsp;·&nbsp; btw-id NL002043019B28</span>
+    <span>KvK 27144483 &nbsp;·&nbsp; BTW NL002043019B28</span>
   </div>
 </footer>
 
