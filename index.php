@@ -245,7 +245,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="year"></span> EXCITED software &nbsp;·&nbsp; Kamgrasstraat 30, 2288 HE Rijswijk</span>
+    <span>© <?= date('Y') ?> EXCITED software &nbsp;·&nbsp; Kamgrasstraat 30, 2288 HE Rijswijk</span>
     <span>KvK 27144483 &nbsp;·&nbsp; BTW NL002043019B28</span>
   </div>
 </footer>

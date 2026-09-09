@@ -1,5 +1,3 @@
-  document.getElementById('year').textContent = new Date().getFullYear();
-
   /* Codevenster: typt een PHP-voorbeeld, wisselt daarna een keer naar PL/SQL. */
   const snippets = [
     { file: 'OrderService.php', label: 'PHP 8.5', code:
