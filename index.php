@@ -5,11 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EXCITED software | Standaard in maatwerk software</title>
 <meta name="description" content="EXCITED software bouwt en onderhoudt maatwerkapplicaties in PHP, Oracle APEX en PL/SQL, koppelt systemen aan elkaar en houdt je IT draaiend.">
+<meta name="author" content="Ed de Heus">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://excited-software.nl/">
+<meta name="theme-color" content="#da140f">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EXCITED software">
+<meta property="og:title" content="EXCITED software | Standaard in maatwerk software">
+<meta property="og:description" content="Maatwerkapplicaties in PHP en Oracle APEX, systeemkoppelingen en IT-beheer voor kleine bedrijven. Eén aanspreekpunt, geen tussenlagen.">
+<meta property="og:url" content="https://excited-software.nl/">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="https://excited-software.nl/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EXCITED software — Software die gewoon werkt.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EXCITED software | Standaard in maatwerk software">
+<meta name="twitter:description" content="Maatwerkapplicaties in PHP en Oracle APEX, systeemkoppelingen en IT-beheer voor kleine bedrijven.">
+<meta name="twitter:image" content="https://excited-software.nl/assets/img/og-image.png">
+
 <link rel="icon" type="image/png" href="assets/img/excited-logo-500px.png">
+<link rel="apple-touch-icon" href="assets/img/excited-logo-500px.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://excited-software.nl/#ed",
+      "name": "Ed de Heus",
+      "jobTitle": "Softwareontwikkelaar",
+      "url": "https://excited-software.nl/",
+      "sameAs": [
+        "https://github.com/eddeheus",
+        "https://www.linkedin.com/in/eddeheus/"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://excited-software.nl/#business",
+      "name": "EXCITED software",
+      "url": "https://excited-software.nl/",
+      "logo": "https://excited-software.nl/assets/img/excited-logo-500px.png",
+      "image": "https://excited-software.nl/assets/img/og-image.png",
+      "description": "EXCITED software bouwt en onderhoudt maatwerkapplicaties in PHP en Oracle APEX, koppelt systemen aan elkaar en houdt de IT van kleine bedrijven draaiend.",
+      "founder": { "@id": "https://excited-software.nl/#ed" },
+      "employee": { "@id": "https://excited-software.nl/#ed" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rijswijk",
+        "addressRegion": "Zuid-Holland",
+        "addressCountry": "NL"
+      },
+      "areaServed": { "@type": "Country", "name": "Nederland" },
+      "knowsLanguage": ["nl", "en"],
+      "knowsAbout": [
+        "PHP", "Oracle APEX", "PL/SQL", "Oracle Database",
+        "Systeemintegratie", "API-koppelingen", "Applicatiebeheer",
+        "Legacy PHP-migratie", "Microsoft 365"
+      ],
+      "identifier": [
+        { "@type": "PropertyValue", "name": "KvK", "value": "27144483" },
+        { "@type": "PropertyValue", "name": "btw-id", "value": "NL002043019B28" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Diensten",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Webapplicaties in PHP", "description": "Maatwerk webapps die precies doen wat jouw proces vraagt: klantportalen, planningstools, backoffice en bestelsystemen." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bestaande PHP-code moderniseren", "description": "Oude PHP-applicaties stap voor stap naar een actuele, ondersteunde PHP-versie brengen zonder dat het bedrijf stilligt." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Applicaties in Oracle APEX", "description": "Bedrijfsapplicaties, portalen en beheerschermen bovenop een Oracle-database, inclusief PL/SQL, onderhoud en support." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Koppelingen en data-integraties", "description": "API-koppelingen, imports en exports tussen systemen, en HTML-mailings die in elke mailclient goed weergeven." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT-support en beheer", "description": "Werkplekken, Microsoft 365, mail, servers en hosting van applicaties via één aanspreekpunt." } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://excited-software.nl/#website",
+      "url": "https://excited-software.nl/",
+      "name": "EXCITED software",
+      "inLanguage": "nl-NL",
+      "publisher": { "@id": "https://excited-software.nl/#business" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
