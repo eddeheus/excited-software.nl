@@ -1,0 +1,20 @@
+# EXCITED software
+
+> Eenmanszaak van Ed de Heus (Rijswijk, Nederland) die maatwerk webapplicaties bouwt en onderhoudt in PHP en Oracle APEX, systemen aan elkaar koppelt en de IT van kleine bedrijven draaiend houdt. Eén aanspreekpunt, geen tussenlagen.
+
+## Diensten
+- Webapplicaties in PHP: maatwerk webapps zoals klantportalen, planningstools, backoffice- en bestelsystemen (PHP 8.5, MySQL, JavaScript, CSS).
+- Bestaande PHP-code moderniseren: oude PHP-applicaties (PHP 5/7) stap voor stap naar een actuele, ondersteunde PHP 8-versie brengen zonder bedrijfsstilstand.
+- Applicaties in Oracle APEX: bedrijfsapplicaties, portalen en beheerschermen bovenop een Oracle-database, inclusief PL/SQL, onderhoud en support.
+- Koppelingen en data-integraties: API-koppelingen, imports/exports tussen systemen, en HTML-mailings die in elke mailclient goed weergeven.
+- IT-support en beheer: werkplekken, Microsoft 365, mail, servers en hosting van applicaties via één aanspreekpunt.
+
+## Praktisch
+- Vestigingsplaats: Kamgrasstraat 30, 2288 HE Rijswijk, Nederland.
+- Werkgebied: regio Den Haag/Rotterdam op locatie, of remote in heel Nederland.
+- Talen: Nederlands en Engels.
+- KvK 27144483, btw-id NL002043019B28.
+
+## Pagina's
+- [Homepage](https://excited-software.nl/): diensten, werkwijze en contactformulier.
+- [Contact](https://excited-software.nl/#contact): contactformulier voor nieuwe aanvragen.
