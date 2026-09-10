@@ -35,8 +35,9 @@
   <meta name="twitter:description" content="Maatwerkapplicaties in PHP en Oracle APEX, systeemkoppelingen en IT-beheer voor kleine bedrijven.">
   <meta name="twitter:image" content="https://excited-software.nl/assets/img/og-image.png">
 
-  <link rel="icon" type="image/png" href="assets/img/excited-logo-500px.png">
-  <link rel="apple-touch-icon" href="assets/img/excited-logo-500px.png">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/img/excited-logo-500px.png" sizes="500x500">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
