@@ -7,9 +7,10 @@ Locatie: Rijswijk, Nederland
 
 /* THANKS */
 Aan iedereen die ver genoeg doorklikt om dit bestand te vinden.
+Thuis draait trouwens ook een flinke Home Assistant-opstelling, puur voor de lol.
 
 /* SITE */
-Laatst bijgewerkt: 2026-09-13
+Laatst bijgewerkt: 2026-09-14
 Standaarden: HTML5, CSS3, JSON-LD
 Techniek: PHP, vanilla JavaScript (geen framework)
 Spambescherming: Cloudflare Turnstile

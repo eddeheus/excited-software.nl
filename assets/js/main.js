@@ -1,3 +1,7 @@
+  /* Een groet voor wie de devtools openzet. */
+  console.log('%cSoftware die gewoon werkt.', 'color:#da140f;font-weight:bold;font-size:20px');
+  console.log('Nieuwsgierig hoe dit gebouwd is? https://github.com/eddeheus/excited-software.nl');
+
   /* Codevenster: typt om de beurt een PHP-, PL/SQL- en JavaScript-voorbeeld. */
   // PHP-versienummer komt van de server (zie index.php), niet hardcoded.
   const phpVersion = document.currentScript?.dataset.phpVersion;
