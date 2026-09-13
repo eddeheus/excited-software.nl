@@ -1,6 +1,6 @@
 # Deze map bevat alleen server-side config (secrets.php, turnstile.php).
 # Nooit rechtstreeks via de browser opvraagbaar, alleen via PHP's require()
-# vanuit index.php/contact.php — dat gaat buiten de webserver om.
+# vanuit index.php/contact.php. Dat gaat buiten de webserver om.
 <IfModule mod_authz_core.c>
     Require all denied
 </IfModule>

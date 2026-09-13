@@ -1,7 +1,7 @@
 # SFTP/deploy config bevat hostnaam, gebruikersnaam en pad naar een SSH key
 .vscode/sftp.json
 
-# Secrets (SMTP, API-keys e.d.) — nooit in git
+# Secrets (SMTP, API-keys e.d.), nooit in git
 config/secrets.php
 
 # Let's Encrypt validatie: tijdelijk en server-side (Plesk), hoort niet in git.

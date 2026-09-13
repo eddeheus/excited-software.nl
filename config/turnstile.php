@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Publieke Cloudflare Turnstile site key — mag in git, wordt in de HTML gebruikt.
+ * Publieke Cloudflare Turnstile site key, mag in git, wordt in de HTML gebruikt.
  * Aanmaken/beheren: dash.cloudflare.com → Turnstile → widget voor excited-software.nl.
  * Zolang hier de placeholder in staat, wordt de captcha niet geladen (zie index.php).
  */

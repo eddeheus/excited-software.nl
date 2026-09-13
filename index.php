@@ -37,7 +37,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
   <meta property="og:image" content="https://excited-software.nl/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="EXCITED software — Software die gewoon werkt.">
+  <meta property="og:image:alt" content="EXCITED software · Software die gewoon werkt.">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EXCITED software | Standaard in maatwerk software">
@@ -196,7 +196,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
           </li>
           <li>
             <h3>IT-support en beheer <span class="tech">Microsoft 365 · hosting · domeinen · SSL</span></h3>
-            <p>Voor klanten die één aanspreekpunt willen als iets niet werkt. Werkplekken, mail, servers, domeinregistratie, hosting en SSL-certificaten — alles onder één dak.</p>
+            <p>Voor klanten die één aanspreekpunt willen als iets niet werkt. Werkplekken, mail, servers, domeinregistratie, hosting en SSL-certificaten, allemaal onder één dak.</p>
           </li>
         </ul>
       </div>
@@ -242,7 +242,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
         <div>
           <h2>Iets <span class="soft">bespreken</span>?</h2>
           <p>Vertel kort wat je wilt bouwen of wat er niet werkt. Je krijgt binnen een werkdag reactie, zonder verplichtingen.</p>
-          <p>Ook voor een second opinion over bestaande code, een korte technische check, of gewoon een vraag waar je zelf niet uitkomt — ook dat mag in het bericht.</p>
+          <p>Ook voor een second opinion over bestaande code, een korte technische check, of gewoon een vraag waar je zelf niet uitkomt: dat mag ook in het bericht.</p>
           <p>Liever bellen? Zet je nummer in het bericht, dan bellen we je terug.</p>
           <p class="note">Je gegevens gebruik ik alleen om te reageren op je bericht. Meer weten? Lees de <a href="privacyverklaring.php">privacyverklaring</a>.</p>
         </div>
