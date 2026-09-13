@@ -1,3 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/config/turnstile.php';
+// Widget/script pas laden zodra er een echte site key is ingevuld, anders geeft
+// Cloudflare een foutmelding voor de placeholder.
+$turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -42,6 +51,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <?php if ($turnstileEnabled): ?>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <?php endif; ?>
 
   <script type="application/ld+json">
     {
@@ -229,6 +241,9 @@
           <label>Bedrijf (optioneel) <input type="text" name="bedrijf" autocomplete="organization"></label>
           <label>Waar kunnen we je mee helpen? <textarea name="bericht" required></textarea></label>
           <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <?php if ($turnstileEnabled): ?>
+          <div class="cf-turnstile" data-sitekey="<?= htmlspecialchars(TURNSTILE_SITE_KEY, ENT_QUOTES) ?>" data-theme="light"></div>
+          <?php endif; ?>
           <div class="form-foot">
             <button class="btn btn-red" type="submit"><span class="spin" aria-hidden="true"></span><span class="txt">Verstuur bericht</span></button>
             <span class="msg" id="formmsg" aria-live="polite"></span>

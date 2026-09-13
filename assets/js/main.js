@@ -68,11 +68,20 @@
       const r = await fetch('contact.php', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
       const j = await r.json();
       if (j.ok) { form.reset(); form.classList.add('sent'); }
-      else { msg.className = 'msg err'; msg.textContent = j.error || 'Versturen is niet gelukt. Probeer het later nog eens.'; }
-    } catch { msg.className = 'msg err'; msg.textContent = 'Versturen is niet gelukt. Probeer het later nog eens.'; }
+      else {
+        msg.className = 'msg err'; msg.textContent = j.error || 'Versturen is niet gelukt. Probeer het later nog eens.';
+        window.turnstile?.reset(); // token is eenmalig; nieuwe nodig voor de volgende poging
+      }
+    } catch {
+      msg.className = 'msg err'; msg.textContent = 'Versturen is niet gelukt. Probeer het later nog eens.';
+      window.turnstile?.reset();
+    }
     btn.classList.remove('busy'); btn.querySelector('.txt').textContent = 'Verstuur bericht';
   });
-  document.getElementById('again').addEventListener('click', () => { form.classList.remove('sent'); form.querySelector('input').focus(); });
+  document.getElementById('again').addEventListener('click', () => {
+    form.classList.remove('sent'); form.querySelector('input').focus();
+    window.turnstile?.reset(); // ook hier: vorig token is al verbruikt
+  });
 
   /* Formulier en de twee blokken laten binnenkomen zodra ze in beeld scrollen. */
   const services = document.querySelector('.services');

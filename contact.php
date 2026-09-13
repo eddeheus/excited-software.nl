@@ -11,6 +11,14 @@ const ONTVANGER  = 'e.deheus@excited-software.nl';
 const AFZENDER   = 'website@excited-software.nl'; // moet een adres op je eigen domein zijn i.v.m. SPF/DMARC
 const ONDERWERP  = 'Bericht via excited-software.nl';
 
+// TURNSTILE_SECRET_KEY staat in config/secrets.php: buiten git, handmatig op de
+// server gezet (zie config/secrets.example.php). Staat dat bestand er nog niet,
+// dan wordt de captcha-check overgeslagen i.p.v. het formulier te breken.
+$secretsFile = __DIR__ . '/config/secrets.php';
+if (is_file($secretsFile)) {
+    require $secretsFile;
+}
+
 header('Content-Type: application/json; charset=utf-8');
 
 function antwoord(bool $ok, ?string $error = null, int $status = 200): never
@@ -27,6 +35,36 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // Honeypot: echte bezoekers zien dit veld niet, bots vullen het vaak wel in.
 if (!empty($_POST['website'])) {
     antwoord(true); // doe alsof het gelukt is, zodat de bot niets leert
+}
+
+// Cloudflare Turnstile verifiëren (alleen als config/secrets.php geconfigureerd is).
+if (defined('TURNSTILE_SECRET_KEY')) {
+    $token = (string)($_POST['cf-turnstile-response'] ?? '');
+    if ($token === '') {
+        antwoord(false, 'Captcha-verificatie ontbreekt. Herlaad de pagina en probeer het opnieuw.', 422);
+    }
+
+    $verificatie = @file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, stream_context_create([
+        'http' => [
+            'method'  => 'POST',
+            'header'  => "Content-Type: application/x-www-form-urlencoded\r\n",
+            'content' => http_build_query([
+                'secret'   => TURNSTILE_SECRET_KEY,
+                'response' => $token,
+                'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+            ]),
+            'timeout' => 5,
+        ],
+    ]));
+
+    // Bij een storing bij Cloudflare zelf (bv. timeout) laten we het bericht door:
+    // fail-open, zodat een tijdelijke API-hik geen echte aanvraag blokkeert.
+    if ($verificatie !== false) {
+        $resultaat = json_decode($verificatie, true);
+        if (!($resultaat['success'] ?? false)) {
+            antwoord(false, 'Captcha-verificatie mislukt. Herlaad de pagina en probeer het opnieuw.', 422);
+        }
+    }
 }
 
 $schoon = static fn(string $key, int $max): string =>
