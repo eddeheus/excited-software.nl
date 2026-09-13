@@ -94,7 +94,8 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
           "knowsAbout": [
             "PHP", "Oracle APEX", "PL/SQL", "Oracle Database",
             "Systeemintegratie", "API-koppelingen", "Applicatiebeheer",
-            "Legacy PHP-migratie", "Microsoft 365"
+            "Legacy PHP-migratie", "Microsoft 365",
+            "Domeinregistratie", "Webhosting", "Plesk", "SSL-certificaten"
           ],
           "identifier": [
             { "@type": "PropertyValue", "name": "KvK", "value": "27144483" },
@@ -108,7 +109,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bestaande PHP-code moderniseren", "description": "Oude PHP-applicaties stap voor stap naar een actuele, ondersteunde PHP-versie brengen zonder dat het bedrijf stilligt." } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Applicaties in Oracle APEX", "description": "Bedrijfsapplicaties, portalen en beheerschermen bovenop een Oracle-database, inclusief PL/SQL, onderhoud en support." } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Koppelingen en data-integraties", "description": "API-koppelingen, imports en exports tussen systemen, en HTML-mailings die in elke mailclient goed weergeven." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT-support en beheer", "description": "Werkplekken, Microsoft 365, mail, servers en hosting van applicaties via één aanspreekpunt." } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT-support en beheer", "description": "Werkplekken, Microsoft 365, mail, servers, domeinregistratie, hosting en SSL-certificaten via één aanspreekpunt." } }
             ]
           }
         },
@@ -194,8 +195,8 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
             <p>Systemen die met elkaar praten in plaats van dubbel overtypen. Ook HTML-mailings die er in elke mailclient goed uitzien.</p>
           </li>
           <li>
-            <h3>IT-support en beheer <span class="tech">Microsoft 365 · servers · hosting</span></h3>
-            <p>Voor klanten die één aanspreekpunt willen als iets niet werkt. Werkplekken, mail, servers en de hosting van je applicaties.</p>
+            <h3>IT-support en beheer <span class="tech">Microsoft 365 · Plesk · domeinen · SSL</span></h3>
+            <p>Voor klanten die één aanspreekpunt willen als iets niet werkt. Werkplekken, mail, servers, domeinregistratie, hosting en SSL-certificaten — alles onder één dak.</p>
           </li>
         </ul>
       </div>
