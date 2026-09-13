@@ -7,4 +7,4 @@ declare(strict_types=1);
  * Aanmaken/beheren: dash.cloudflare.com → Turnstile → widget voor excited-software.nl.
  * Zolang hier de placeholder in staat, wordt de captcha niet geladen (zie index.php).
  */
-const TURNSTILE_SITE_KEY = 'VUL_HIER_JE_SITE_KEY_IN';
+const TURNSTILE_SITE_KEY = '0x4AAAAAAEy9z7sSrlu_rZt5';
