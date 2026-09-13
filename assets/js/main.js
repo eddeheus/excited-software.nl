@@ -1,4 +1,4 @@
-  /* Codevenster: typt een PHP-voorbeeld, wisselt daarna een keer naar PL/SQL. */
+  /* Codevenster: typt om de beurt een PHP-, PL/SQL- en JavaScript-voorbeeld. */
   const snippets = [
     { file: 'OrderService.php', label: 'PHP 8.5', code:
 `<span class="k">final class</span> OrderService
@@ -29,7 +29,21 @@
     <span class="c">-- order staat in de webshop</span>
   <span class="k">end</span> sync_to_webshop;
 
-<span class="k">end</span> pkg_orders;` }
+<span class="k">end</span> pkg_orders;` },
+    { file: 'debounce.js', label: 'JavaScript', code:
+`<span class="k">export function</span> debounce(<span class="v">fn</span>, <span class="v">wait</span> = 300) {
+    <span class="k">let</span> <span class="v">timer</span>;
+    <span class="k">return</span> (...args) => {
+        clearTimeout(<span class="v">timer</span>);
+        <span class="v">timer</span> = setTimeout(() => fn(...args), <span class="v">wait</span>);
+    };
+}
+
+<span class="k">const</span> <span class="v">zoekInput</span> = document.querySelector(<span class="s">'#zoek'</span>);
+zoekInput.addEventListener(<span class="s">'input'</span>, debounce((e) => {
+    zoekResultaten(e.target.value);
+    <span class="c">// pas zoeken als de gebruiker even stopt met typen</span>
+}, 250));` }
   ];
 
   const pre = document.getElementById('code');
@@ -53,8 +67,11 @@
       setTimeout(step, t.startsWith('<') ? 0 : 14);
     })();
   }
+  function cycle(i) {
+    type(snippets[i], () => setTimeout(() => cycle((i + 1) % snippets.length), 7000));
+  }
   if (reduce) show(snippets[0]);
-  else setTimeout(() => type(snippets[0], () => setTimeout(() => type(snippets[1]), 7000)), 1300);
+  else setTimeout(() => cycle(0), 1300);
 
   /* Contactformulier: verstuurt naar contact.php zonder pagina-herlaad. */
   const form = document.getElementById('contactform');
