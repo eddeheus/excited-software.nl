@@ -1,6 +1,10 @@
   /* Codevenster: typt om de beurt een PHP-, PL/SQL- en JavaScript-voorbeeld. */
+  // PHP-versienummer komt van de server (zie index.php), niet hardcoded.
+  const phpVersion = document.currentScript?.dataset.phpVersion;
+  const phpLabel = phpVersion ? `PHP ${phpVersion}` : 'PHP';
+
   const snippets = [
-    { file: 'OrderService.php', label: 'PHP 8.5', code:
+    { file: 'OrderService.php', label: phpLabel, code:
 `<span class="k">final class</span> OrderService
 {
     <span class="k">public function</span> __construct(

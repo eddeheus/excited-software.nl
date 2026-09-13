@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 require __DIR__ . '/config/turnstile.php';
+// Echte PHP-versie van deze server, gebruikt bij "PHP 8.x" op de pagina.
+// Zo hoeft dat getal nooit met de hand bijgewerkt na een PHP-upgrade.
+$phpVersion = PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;
 // Widget/script pas laden zodra er een echte site key is ingevuld, anders geeft
 // Cloudflare een foutmelding voor de placeholder.
 $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
@@ -164,7 +167,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
         </div>
 
         <div class="code-wrap" aria-hidden="true">
-          <span class="sticker" id="sticker">PHP 8.5</span>
+          <span class="sticker" id="sticker">PHP <?= $phpVersion ?></span>
           <div class="code">
             <div class="code-bar"><i></i><i></i><i></i><em id="fname">OrderService.php</em></div>
             <pre id="code"></pre>
@@ -179,7 +182,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
         <p class="intro">Geen buzzwords, wel software die al jaren in productie draait bij klanten.</p>
         <ul class="services">
           <li>
-            <h3>Webapplicaties in PHP <span class="tech">PHP 8.5 · MySQL · JavaScript · CSS</span></h3>
+            <h3>Webapplicaties in PHP <span class="tech">PHP <?= $phpVersion ?> · MySQL · JavaScript · CSS</span></h3>
             <p>Maatwerk webapps die precies doen wat jouw proces vraagt: klantportalen, planningstools, backoffice en bestelsystemen. Moderne PHP, netjes gestructureerd en gehost waar jij dat wilt.</p>
           </li>
           <li>
@@ -279,6 +282,6 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" data-php-version="<?= $phpVersion ?>"></script>
 </body>
 </html>
