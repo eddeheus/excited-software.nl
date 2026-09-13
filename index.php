@@ -195,7 +195,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
           </li>
           <li>
             <h3>IT-support en beheer <span class="tech">Microsoft 365 · servers · hosting</span></h3>
-            <p>Voor klanten die één nummer willen bellen als iets niet werkt. Werkplekken, mail, servers en de hosting van je applicaties.</p>
+            <p>Voor klanten die één aanspreekpunt willen als iets niet werkt. Werkplekken, mail, servers en de hosting van je applicaties.</p>
           </li>
         </ul>
       </div>
@@ -217,7 +217,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
           <h2>Wie zijn <span class="soft">wij</span>?</h2>
           <p>Eerlijk is eerlijk: EXCITED software is een eenmanszaak. Ik ben Ed, softwareontwikkelaar uit Rijswijk, sinds 1993 zelfstandig ondernemer in de IT. Als je met ons werkt, praat je dus rechtstreeks met degene die je software bouwt en onderhoudt. Geen overdracht, geen ruis.</p>
           <ul class="facts">
-            <li>Jarenlange ervaring met PHP en Oracle in productieomgevingen</li>
+            <li>Jarenlange ervaring met PHP en Oracle</li>
             <li>Rechtstreeks contact, geen accountmanager ertussen</li>
             <li>Op locatie in de regio Den Haag/Rotterdam of remote</li>
             <li>Nederlands en Engels</li>
