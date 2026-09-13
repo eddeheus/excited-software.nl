@@ -29,6 +29,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
   <meta name="author" content="Ed de Heus">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://excited-software.nl/">
+  <link type="text/plain" rel="author" href="/humans.txt">
   <meta name="theme-color" content="#da140f">
 
   <meta property="og:type" content="website">

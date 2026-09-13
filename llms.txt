@@ -3,7 +3,7 @@
 > Eenmanszaak van Ed de Heus (Rijswijk, Nederland) die maatwerk webapplicaties bouwt en onderhoudt in PHP en Oracle APEX, systemen aan elkaar koppelt en de IT van kleine bedrijven draaiend houdt. Eén aanspreekpunt, geen tussenlagen.
 
 ## Diensten
-- Webapplicaties in PHP: maatwerk webapps zoals klantportalen, planningstools, backoffice- en bestelsystemen (PHP 8.5, MySQL, JavaScript, CSS).
+- Webapplicaties in PHP: maatwerk webapps zoals klantportalen, planningstools, backoffice- en bestelsystemen (PHP 8, MySQL, JavaScript, CSS).
 - Bestaande PHP-code moderniseren: oude PHP-applicaties (PHP 5/7) stap voor stap naar een actuele, ondersteunde PHP 8-versie brengen zonder bedrijfsstilstand.
 - Applicaties in Oracle APEX: bedrijfsapplicaties, portalen en beheerschermen bovenop een Oracle-database, inclusief PL/SQL, onderhoud en support.
 - Koppelingen en data-integraties: API-koppelingen, imports/exports tussen systemen, en HTML-mailings die in elke mailclient goed weergeven.

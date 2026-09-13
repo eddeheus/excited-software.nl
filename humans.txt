@@ -1,0 +1,16 @@
+/* TEAM */
+Ontwikkelaar: Ed de Heus
+Site: https://excited-software.nl
+LinkedIn: https://www.linkedin.com/in/eddeheus/
+GitHub: https://github.com/eddeheus
+Locatie: Rijswijk, Nederland
+
+/* THANKS */
+Aan iedereen die ver genoeg doorklikt om dit bestand te vinden.
+
+/* SITE */
+Laatst bijgewerkt: 2026-09-13
+Standaarden: HTML5, CSS3, JSON-LD
+Techniek: PHP, vanilla JavaScript (geen framework)
+Spambescherming: Cloudflare Turnstile
+Hosting: Plesk, Nederland
