@@ -195,7 +195,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
             <p>Systemen die met elkaar praten in plaats van dubbel overtypen. Ook HTML-mailings die er in elke mailclient goed uitzien.</p>
           </li>
           <li>
-            <h3>IT-support en beheer <span class="tech">Microsoft 365 · Plesk · domeinen · SSL</span></h3>
+            <h3>IT-support en beheer <span class="tech">Microsoft 365 · hosting · domeinen · SSL</span></h3>
             <p>Voor klanten die één aanspreekpunt willen als iets niet werkt. Werkplekken, mail, servers, domeinregistratie, hosting en SSL-certificaten — alles onder één dak.</p>
           </li>
         </ul>
