@@ -78,6 +78,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
           "logo": "https://excited-software.nl/assets/img/excited-logo-500px.png",
           "image": "https://excited-software.nl/assets/img/og-image.png",
           "description": "EXCITED software bouwt en onderhoudt maatwerkapplicaties in PHP en Oracle APEX, koppelt systemen aan elkaar en houdt de IT van kleine bedrijven draaiend.",
+          "foundingDate": "1993-07-01",
           "founder": { "@id": "https://excited-software.nl/#ed" },
           "employee": { "@id": "https://excited-software.nl/#ed" },
           "address": {
@@ -215,7 +216,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
         </div>
         <div class="card red">
           <h2>Wie zijn <span class="soft">wij</span>?</h2>
-          <p>Eerlijk is eerlijk: EXCITED software is een eenmanszaak. Ik ben Ed, softwareontwikkelaar uit Rijswijk. Als je met ons werkt, praat je dus rechtstreeks met degene die je software bouwt en onderhoudt. Geen overdracht, geen ruis.</p>
+          <p>Eerlijk is eerlijk: EXCITED software is een eenmanszaak. Ik ben Ed, softwareontwikkelaar uit Rijswijk, sinds 1993 zelfstandig ondernemer in de IT. Als je met ons werkt, praat je dus rechtstreeks met degene die je software bouwt en onderhoudt. Geen overdracht, geen ruis.</p>
           <ul class="facts">
             <li>Jarenlange ervaring met PHP en Oracle in productieomgevingen</li>
             <li>Rechtstreeks contact, geen accountmanager ertussen</li>
