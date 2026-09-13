@@ -206,10 +206,9 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
         <div class="card">
           <h2>Zo werken <span class="soft">wij</span></h2>
           <p>We beginnen met een gesprek over wat er nu niet lekker loopt. Daarna krijg je een concreet voorstel: wat we gaan bouwen, wat het kost en wanneer het klaar is.</p>
-          <p>Tijdens het bouwen zie je regelmatig tussenversies, zodat we op tijd kunnen bijsturen. <strong>Na oplevering blijven we beschikbaar</strong> voor vragen, aanpassingen en onderhoud. Veel klanten werken al jaren met ons samen.</p>
+          <p>Je krijgt een werkende oplevering om op te reageren, en op basis van jouw feedback verwerk ik daarna nog de puntjes op de i. <strong>Ook daarna blijven we beschikbaar</strong> voor vragen, aanpassingen en onderhoud. Veel klanten werken al jaren met ons samen.</p>
           <ul class="facts">
             <li>Concreet voorstel vooraf: prijs, planning en scope helder</li>
-            <li>Regelmatig tussenversies tijdens het bouwen, geen verrassingen achteraf</li>
             <li>Documentatie en overdracht als jij dat wilt</li>
             <li>Ook na oplevering beschikbaar voor onderhoud en vragen</li>
           </ul>
