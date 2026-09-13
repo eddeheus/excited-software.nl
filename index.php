@@ -216,6 +216,10 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
             <li>Op locatie in de regio Den Haag/Rotterdam of remote</li>
             <li>Nederlands en Engels</li>
           </ul>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/eddeheus/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/eddeheus" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
         </div>
       </div>
     </section>
@@ -262,7 +266,7 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
   <footer>
     <div class="wrap">
       <span>© <?= date('Y') ?> EXCITED software &nbsp;·&nbsp; Kamgrasstraat 30, 2288 HE Rijswijk</span>
-      <span>KvK 27144483 &nbsp;·&nbsp; BTW NL002043019B28</span>
+      <span><a href="privacyverklaring.php">Privacyverklaring</a> &nbsp;·&nbsp; KvK 27144483 &nbsp;·&nbsp; BTW NL002043019B28</span>
     </div>
   </footer>
 

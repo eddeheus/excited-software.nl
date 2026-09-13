@@ -165,6 +165,10 @@ h2 { font-size: clamp(28px, 3.6vw, 40px); letter-spacing: -.025em; line-height: 
 .facts li { display: flex; gap: 12px; align-items: baseline; }
 .facts li::before { content: ""; width: 10px; height: 10px; flex: none; background: var(--red); border-radius: 3px; transform: translateY(-1px) rotate(45deg); }
 
+.socials { display: flex; gap: 18px; margin: 24px 0 0; padding: 0; }
+.socials a { color: #fff; font-weight: 600; font-size: 14.5px; text-decoration: none; border-bottom: 1.5px solid var(--grey); padding-bottom: 2px; transition: border-color .15s, color .15s; }
+.socials a:hover { color: var(--red-tint); border-color: var(--red-tint); }
+
 /* Slogan die zichzelf schrijft */
 .slogan-band { padding: 40px 0 96px; text-align: center; }
 .slogan-band p { margin: 0; font-size: clamp(30px, 5vw, 60px); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; min-height: 1.1em; }
