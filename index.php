@@ -242,7 +242,9 @@ $turnstileEnabled = TURNSTILE_SITE_KEY !== 'VUL_HIER_JE_SITE_KEY_IN';
         <div>
           <h2>Iets <span class="soft">bespreken</span>?</h2>
           <p>Vertel kort wat je wilt bouwen of wat er niet werkt. Je krijgt binnen een werkdag reactie, zonder verplichtingen.</p>
+          <p>Ook voor een second opinion over bestaande code, een korte technische check, of gewoon een vraag waar je zelf niet uitkomt — ook dat mag in het bericht.</p>
           <p>Liever bellen? Zet je nummer in het bericht, dan bellen we je terug.</p>
+          <p class="note">Je gegevens gebruik ik alleen om te reageren op je bericht. Meer weten? Lees de <a href="privacyverklaring.php">privacyverklaring</a>.</p>
         </div>
         <form id="contactform" action="contact.php" method="post" novalidate>
           <div class="row">
